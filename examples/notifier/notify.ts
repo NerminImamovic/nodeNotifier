@@ -1,4 +1,4 @@
-import { notifierFactory } from "../../src/lib/notifierFactory";
+import notifierFactory from "../../src/lib/notifierFactory";
 
 async function main() {
     let iterator = 0;

@@ -1,4 +1,7 @@
-import { notifierFactory } from "../../src/lib/notifierFactory";
+import notifierFactory from "../../src/lib/notifierFactory";
+import loggerFactory from "../../src/lib/loggerFactory";
+
+const logger = loggerFactory();
 
 async function main() {
     const notifier = notifierFactory();
@@ -9,7 +12,7 @@ async function main() {
 }
 
 function customMessageHandler(message) {
-    console.log(`Via notificator received ${JSON.stringify(message)}`);
+    logger.info(`Via notificator received ${JSON.stringify(message)}`);
 }
 
 main();
